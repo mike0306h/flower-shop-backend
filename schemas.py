@@ -179,6 +179,8 @@ class ProductCreate(BaseModel):
     @field_validator('price')
     @classmethod
     def price_positive(cls, v):
+        if v is None:
+            return None
         if v < 0:
             raise ValueError('商品价格不能为负数')
         return v
@@ -186,6 +188,8 @@ class ProductCreate(BaseModel):
     @field_validator('stock')
     @classmethod
     def stock_non_negative(cls, v):
+        if v is None:
+            return None
         if v < 0:
             raise ValueError('库存不能为负数')
         return v
@@ -221,13 +225,13 @@ class ProductResponse(BaseModel):
     original_price: Optional[float]
     images: Optional[List[str]]
     stock: int
-    stock_threshold: int
-    notify_low_stock: bool
-    category: str
-    tags: Optional[List[str]]
-    flower_options: Optional[List[dict]]
-    language: str
-    active: bool
+    stock_threshold: Optional[int] = None
+    notify_low_stock: Optional[bool] = None
+    category: Optional[str] = None
+    tags: Optional[List[str]] = None
+    flower_options: Optional[List[dict]] = None
+    language: Optional[str] = None
+    active: Optional[bool] = None
     created_at: datetime
 
     class Config:
@@ -539,13 +543,13 @@ class CategoryResponse(BaseModel):
     id: int
     slug: str
     name_zh: str
-    name_th: str
-    name_en: str
+    name_th: Optional[str] = None
+    name_en: Optional[str] = None
     image: Optional[str] = None
     emoji: Optional[str] = '🌸'
-    sort_order: int
-    active: bool
-    show_on_home: bool = True
+    sort_order: Optional[int] = 0
+    active: Optional[bool] = True
+    show_on_home: Optional[bool] = True
     created_at: datetime
 
     class Config:
