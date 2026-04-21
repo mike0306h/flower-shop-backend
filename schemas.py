@@ -596,6 +596,8 @@ class ShopInfoUpdate(BaseModel):
     hours_en: Optional[str] = None
     line_qr_image: Optional[str] = None
     email: Optional[str] = None
+    shop_name: Optional[str] = None
+    logo_url: Optional[str] = None
 
 
 class ShopInfoResponse(BaseModel):
@@ -609,6 +611,8 @@ class ShopInfoResponse(BaseModel):
     hours_en: str
     line_qr_image: str
     email: str
+    shop_name: str
+    logo_url: str
     updated_at: datetime
 
     class Config:

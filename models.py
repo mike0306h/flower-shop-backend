@@ -266,6 +266,8 @@ class ShopInfo(Base):
     hours_th = Column(String(255), default='')
     hours_en = Column(String(255), default='')
     line_qr_image = Column(String(500), default='')  # Line QR码图片URL
+    shop_name = Column(String(255), default='')  # 店铺名称
+    logo_url = Column(String(500), default='')  # 店铺Logo URL
     email = Column(String(100), default='')  # 店铺邮箱
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
