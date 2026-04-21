@@ -20,7 +20,7 @@ if len(SECRET_KEY) < 32:
     raise ValueError("SECRET_KEY must be at least 32 characters")
 
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_HOURS = 24 * 7  # 7 days
+ACCESS_TOKEN_EXPIRE_HOURS=24 * 30  # 30 days
 
 # ============ 登录限流（已迁移至数据库，routers/auth.py 使用 SQL 版本） ============
 

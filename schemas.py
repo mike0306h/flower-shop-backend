@@ -692,6 +692,9 @@ class VerifyEmailResponse(BaseModel):
     success: bool
     message: str
     user: Optional[dict] = None
+    token: Optional[str] = None
+    # register 时 email_verification 已标记 used，但 user 还不存在
+    # 所以这里只返回成功，前端再调用 /register 完成注册并登录
 
 
 class SendEmailResponse(BaseModel):
