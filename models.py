@@ -268,6 +268,8 @@ class ShopInfo(Base):
     line_qr_image = Column(String(500), default='')  # Line QR码图片URL
     shop_name = Column(String(255), default='')  # 店铺名称
     logo_url = Column(String(500), default='')  # 店铺Logo URL
+    seo_keywords = Column(Text, default='')  # SEO关键词
+    seo_description = Column(Text, default='')  # SEO描述
     email = Column(String(100), default='')  # 店铺邮箱
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 

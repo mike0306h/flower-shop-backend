@@ -598,6 +598,8 @@ class ShopInfoUpdate(BaseModel):
     email: Optional[str] = None
     shop_name: Optional[str] = None
     logo_url: Optional[str] = None
+    seo_keywords: Optional[str] = None
+    seo_description: Optional[str] = None
 
 
 class ShopInfoResponse(BaseModel):
@@ -613,6 +615,8 @@ class ShopInfoResponse(BaseModel):
     email: str
     shop_name: str
     logo_url: str
+    seo_keywords: str
+    seo_description: str
     updated_at: datetime
 
     class Config:
