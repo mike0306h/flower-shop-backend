@@ -288,12 +288,12 @@ class UserResponse(BaseModel):
     name: Optional[str]
     status: str = "active"
     level: str = "normal"
-    points: int = 0
-    total_spent: float = 0
-    source: str = "manual"
+    points: Optional[int] = None
+    total_spent: Optional[float] = None
+    source: Optional[str] = None
     last_login: Optional[datetime] = None
-    email_notifications: bool = True
-    avatar: str = "👤"
+    email_notifications: Optional[bool] = None
+    avatar: Optional[str] = None
     created_at: datetime
 
     class Config:
