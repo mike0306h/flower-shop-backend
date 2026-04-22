@@ -129,15 +129,15 @@ class OrderResponse(BaseModel):
     phone: str
     note: Optional[str]
     coupon_code: Optional[str]
-    discount: float = 0
+    discount: Optional[float] = None
     time_slot: Optional[str] = None
     pay_method: Optional[str] = None
     shipped_image: Optional[str] = None
     shipped_link: Optional[str] = None
     delivered_image: Optional[str] = None
     cancel_reason: Optional[str] = None
-    refund_amount: float = 0
-    refund_status: str = "none"
+    refund_amount: Optional[float] = None
+    refund_status: Optional[str] = None
     cancelled_at: Optional[datetime] = None
     refunded_at: Optional[datetime] = None
     created_at: datetime
