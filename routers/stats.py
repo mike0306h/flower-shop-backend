@@ -24,6 +24,7 @@ MESSAGES = {
         "pending_orders": "待处理订单",
         "pending_appointments": "待处理预约",
         "pending_contacts": "待回复咨询",
+        "cancellation_requests": "取消申请",
     },
     "th": {
         "today_orders": "คำสั่งซื้อวันนี้",
@@ -35,6 +36,7 @@ MESSAGES = {
         "pending_orders": "คำสั่งซื้อที่รอดำเนินการ",
         "pending_appointments": "การนัดหมายที่รอดำเนินการ",
         "pending_contacts": "สอบถามที่รอตอบ",
+        "cancellation_requests": "คำขอยกเลิก",
     },
     "en": {
         "today_orders": "Today's Orders",
@@ -46,6 +48,7 @@ MESSAGES = {
         "pending_orders": "Pending Orders",
         "pending_appointments": "Pending Appointments",
         "pending_contacts": "Pending Contacts",
+        "cancellation_requests": "Cancellation Requests",
     }
 }
 

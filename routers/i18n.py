@@ -34,6 +34,7 @@ TRANSLATIONS = {
         "pending_orders": "待处理订单",
         "pending_appointments": "待处理预约",
         "pending_contacts": "待回复咨询",
+        "cancellation_requests": "取消申请",
 
         # Orders
         "order_no": "订单号",
@@ -698,6 +699,7 @@ TRANSLATIONS = {
         "pending_orders": "คำสั่งซื้อรอดำเนินการ",
         "pending_appointments": "การนัดหมายรอดำเนินการ",
         "pending_contacts": "รอตอบกลับ",
+        "cancellation_requests": "คำขอยกเลิก",
 
         # Orders
         "order_no": "เลขที่คำสั่งซื้อ",
@@ -1362,6 +1364,7 @@ TRANSLATIONS = {
         "pending_orders": "Pending Orders",
         "pending_appointments": "Pending Appointments",
         "pending_contacts": "Pending Contacts",
+        "cancellation_requests": "Cancellation Requests",
 
         # Orders
         "order_no": "Order No",
