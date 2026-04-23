@@ -63,7 +63,8 @@ def register(data: UserRegister, db: Session = Depends(get_db)):
         password_hash=bcrypt.hashpw(data.password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8'),
         level="normal",
         points=0,
-        total_spent=0
+        total_spent=0,
+        source="email_register"
     )
     db.add(user)
     db.commit()
